@@ -2,10 +2,10 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.get("/", (req, res) => res.status(200).send("Hello World"));
+router.get("/", (req, res) => res.status(200).send("Hello World - Characters"));
 
 router.use("/characters", require("./charactersRouter"));
-router.use("/films", require("./filmsRouter"));
-router.use("/planets", require("./planetsRouter"));
+// router.use("/films", require("./filmsRouter"));
+// router.use("/planets", require("./planetsRouter"));
 
 module.exports = router;
