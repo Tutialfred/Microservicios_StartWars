@@ -1,15 +1,13 @@
 const { Router } = require("express");
 const controllers = require("../controllers");
-const planets = require("../data/planets.json");
-
+const middlewares = require("../middlewares")
 const router = Router();
 
 router.get("/", controllers.getPlanets);
 
-router.get("/json", (req, res) => {
-    res.status(200).json(planets);
-  });
+router.get("/planets", controllers.getJSON);
 
-router.post("/", controllers.postPlanets)
+
+router.post("/", middlewares.planetsValidations, controllers.postPlanets)
 
 module.exports = router;

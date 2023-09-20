@@ -1,4 +1,7 @@
+const { cachedAsync } = require("../utils")
+
 module.exports = {
-    getPlanets : require("./getPlanets"),
-    postPlanets : require("./postPlanet")
+    getPlanets : cachedAsync(require("./getPlanets")),
+    postPlanets : cachedAsync(require("./postPlanet")),
+    getJSON: cachedAsync(require("./getJSON"))
 }

@@ -1,3 +1,5 @@
+const { response } = require("../utils")
+
 module.exports = (req, res) =>{
-res.status(200).send("Planets")
+        response(res, 200, "Get planets, Congratulations!")
 }
