@@ -1,11 +1,15 @@
 const { Router } = require("express");
+const controllers = require("../controllers");
+const planets = require("../data/planets.json");
 
 const router = Router();
 
-router.get("/", (req, res) => res.status(200).send("Hello World - Planets"));
+router.get("/", controllers.getPlanets);
 
-// router.use("/characters", require("./charactersRouter"));
-// router.use("/films", require("./filmsRouter"));
-router.use("/planets", require("./planetsRouter"));
+router.get("/json", (req, res) => {
+    res.status(200).json(planets);
+  });
+
+router.post("/", controllers.postPlanets)
 
 module.exports = router;
