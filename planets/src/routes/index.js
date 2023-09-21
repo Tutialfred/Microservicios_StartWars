@@ -7,7 +7,6 @@ router.get("/", controllers.getPlanets);
 
 router.get("/planets", controllers.getJSON);
 
-
 router.post("/", middlewares.planetsValidations, controllers.postPlanets)
 
 module.exports = router;

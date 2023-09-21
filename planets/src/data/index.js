@@ -7,8 +7,8 @@ module.exports = {
         return planets;
     },
     create: async() =>{
-        throw Error("X Error al crear")
-        // return "CREADO CON EXITO"
+        // throw Error("X Error al crear")
+        return "CREADO CON EXITO"
     }
 };
 

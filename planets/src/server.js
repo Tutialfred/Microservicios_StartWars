@@ -16,9 +16,9 @@ server.use("*", (req, res) =>{
 // Manejador de errores 'invisible', sobreescribiendo el manejadores de erroes por default de Express
 server.use((error, req, res, next) => {
     res.status(error.statusCode || 500).send({
-        error: true,
-        message: error.message
-    });
+    error: true,
+    message: error.message
+});
 });
 
 
