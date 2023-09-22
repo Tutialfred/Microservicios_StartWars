@@ -15,6 +15,7 @@ server.use("*", (req,res) =>{
 })
 
 // Configurando el manejador de errores por default de Express
+// Reconoce los 4 parametros de la funcion
 server.use((error, req, res, next) => {
     res.status(error.statusCode || 500).send({
         error: true,

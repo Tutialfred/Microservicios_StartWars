@@ -5,8 +5,8 @@ const middlewares = require("../middlewares")
 
 const router = Router();
 
-router.get("/", controllers.getCharacters);
-router.get("/json", controllers.allCharacters)
-router.post("/", middlewares.charactersValidation, controllers.postCharacters)
+router.get("/menuCharacters", controllers.getCharacters);
+router.get("/characters", controllers.allCharacters)
+router.post("/postCharacters", middlewares.charactersValidation, controllers.postCharacters)
 
 module.exports = router;
