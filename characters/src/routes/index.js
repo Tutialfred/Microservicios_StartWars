@@ -1,5 +1,4 @@
 const { Router } = require("express");
-const characters = require("../data/characters.json")
 const controllers = require("../controllers")
 const middlewares = require("../middlewares")
 
