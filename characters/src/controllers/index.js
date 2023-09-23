@@ -1,5 +1,7 @@
+const { cachedAsync } = require("../utils")
+
 module.exports = {
-    getCharacters: require("./getCharacters.js"),
-    allCharacters: require("./allCharacters.js"),
-    postCharacters: require("./postCharacters.js")
+    getCharacters: cachedAsync(require("./getCharacters.js")),
+    allCharacters: cachedAsync(require("./allCharacters.js")),
+    postCharacters: cachedAsync(require("./postCharacters.js"))
 }

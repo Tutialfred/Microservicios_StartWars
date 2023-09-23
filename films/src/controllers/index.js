@@ -1,5 +1,7 @@
+const { cachedAsync } = require("../utils")
+
 module.exports = {
-    getFilms: require("./getFilms.js"),
-    getJson: require("./getJson.js"),
-    postFilms: require("./postFilms.js")
+    getFilms: cachedAsync(require("./getFilms.js")),
+    getJson: cachedAsync(require("./getJson.js")),
+    postFilms: cachedAsync(require("./postFilms.js"))
 }
