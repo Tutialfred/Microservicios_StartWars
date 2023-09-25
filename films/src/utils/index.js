@@ -1,5 +1,5 @@
 module.exports = {
     response: require("./response"),
-    cachedAsynsc: require("./cachedAsync"),
+    cachedAsync: require("./cachedAsync"),
     errors: require("../utils/errors")
 }
