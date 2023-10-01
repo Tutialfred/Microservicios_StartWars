@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const { createProxyMiddleware } = require("http-proxy-middleware"); 
 
 
+
 const app = express();
 
 app.use(morgan("dev"));
@@ -15,7 +16,8 @@ app.use("/menuCharacters", createProxyMiddleware({
 }));
 app.use("/characters", createProxyMiddleware({
     // target: "http://localhost:8001",
-    target: "http://characters:8001",
+    target: "http://characters:8001", 
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     changeOrigin: true
 }));
 app.use("/postCharacters", createProxyMiddleware({
@@ -59,6 +61,19 @@ app.use("/postPlanets", createProxyMiddleware({
     target: "http://planets:8003",
     changeOrigin: true
 }));
+
+
+
+// ! DATABASE
+app.use("/database", createProxyMiddleware({
+    // target: "http://localhost:8003",
+    target: "http://database:8004",
+    changeOrigin: true
+}));
+// ! ??????????????????????
+
+
+
 
 
 
