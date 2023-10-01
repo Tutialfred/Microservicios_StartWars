@@ -7,7 +7,7 @@ const planets = require("./planets.json")
 module.exports = { 
     list: async () => {
         const result = await axios.get("http://database:8004/Planet");
-        return result        
+        return result.data     
         // return planets;
     },
     create: async() =>{

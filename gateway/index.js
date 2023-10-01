@@ -34,12 +34,12 @@ app.use("/menuFilms", createProxyMiddleware({
     changeOrigin: true
 }));
 app.use("/films", createProxyMiddleware({
-    target: "http://localhost:8002",
+    // target: "http://localhost:8002",
     target: "http://films:8002",
     changeOrigin: true
 }));
 app.use("/postFilms", createProxyMiddleware({
-    target: "http://localhost:8002",
+    // target: "http://localhost:8002",
     target: "http://films:8002",
     changeOrigin: true
 }));
@@ -70,7 +70,6 @@ app.use("/database", createProxyMiddleware({
     target: "http://database:8004",
     changeOrigin: true
 }));
-// ! ??????????????????????
 
 
 
