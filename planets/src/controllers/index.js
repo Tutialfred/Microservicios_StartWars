@@ -1,7 +1,8 @@
 const { cachedAsync } = require("../utils")
 
+// Sacamos todos los 'cachedAsync' por que lanzaba un error
 module.exports = {
-    getPlanets : cachedAsync(require("./getPlanets")),
-    postPlanets : cachedAsync(require("./postPlanet")),
-    getJSON: cachedAsync(require("./getJSON"))
+    getPlanets : (require("./getPlanets")),
+    postPlanets : (require("./postPlanet")),
+    getJSON: (require("./getJSON"))
 }

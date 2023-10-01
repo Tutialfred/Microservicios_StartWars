@@ -1,8 +1,9 @@
 // const { cachedAsync } = require("../utils")
 const { cachedAsync } = require("../utils")
 
+// SACAMOS EL 'CACHEDASYNC' por el error que lanza
 module.exports = {
-    getFilms: cachedAsync(require("./getFilms.js")),
-    getJson: cachedAsync(require("./getJson.js")),
-    postFilms: cachedAsync(require("./postFilms.js"))
+    getFilms: (require("./getFilms.js")),
+    getJson: (require("./getJson.js")),
+    postFilms: (require("./postFilms.js"))
 }
